@@ -1,21 +1,35 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
 
-body {
-  font-family:  Arial,  sans-serif;
+body { 
+  font-family: Montserrat, sans-serif;
   font-size:  13px;
   line-height:  18px;
-  color:  #515076
+  color:  #515076;
+  background-image: url(image/bg.png);
+  background-size: 790px auto;
+  background-repeat: no-repeat;
+  background-position-x: calc(100%/2 - 160px);
 }
+
 .title {
+  text-align: center;
   font-size:  70px;
   line-height:  78px;
-  margin:  0;
-  text-align:  center;
+  margin: 220px 0 110px 0;
 }
 
 .product_list {
+  width: 1110px;
   list-style:  none;
   padding:  0;
-  margin:  0;
+  margin:  0 auto;
+  display: flex;
+  flex-wrap: wrap;
+ gap: 45px;
+  justify-content: center;
 }
 
 .category {
@@ -32,6 +46,15 @@ body {
   margin-top:  5px;
 }
 
+.compaund_list {
+  margin-bottom: 25px;
+}
+
+.price_sum {
+  display: flex;
+  justify-content: space-between;
+}
+
 .price {
   font-size:  20px;
   line-height:  24px;
@@ -39,17 +62,15 @@ body {
   margin-top:  25px;
 }
 
-.price_sum {
-  font-size:  20px;
-  line-height:  24px;
+.sum {
+  font-weight: 400;
+  margin-left: 160px;
 }
 
 .product_card_box {
   box-sizing:  border-box;
   max-width:  340px;
-  max-height:  573px;
   padding:  25px;
-  margin:  45px;
   background-color:  #F7F7FA;
 }
 
