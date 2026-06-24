@@ -89,7 +89,16 @@ body {
 }
 
 .compaund__list {
-  margin-left: 20px;
+  margin-left: 15px;
+  padding-top: 5px;
+}
+
+.compaund__name {
+
+}
+
+.ingredients {
+  margin-bottom: 5px;
 }
 
 .price-sum {
