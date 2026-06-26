@@ -1,6 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: Montserrat;
-  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 body { 
@@ -8,71 +14,96 @@ body {
   font-size:  13px;
   line-height:  18px;
   color:  #515076;
-  background-image: url(image/bg_dandelions.png);
-  background-size: 790px auto;
+}
+
+.catalog__conteiner {
+  background-image: url("image/bg_dandelions.png");
   background-repeat: no-repeat;
+  background-size: 790px auto;
   background-position-x: calc(100%/2 - 160px);
+  padding-top: 220px;
+}
+
+.conteiner {
+  width: 1110px;
+  margin: 0 auto 116px auto;  
+}
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 110px;
 }
 
 .title {
   text-align: center;
   font-size:  70px;
   line-height:  78px;
-  margin: 220px 0 110px 0;
 }
 
-.product_list {
-  width: 1110px;
-  list-style:  none;
-  padding:  0;
-  margin:  0 auto;
+.clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products {
   display: flex;
   flex-wrap: wrap;
-  gap: 45px;
   justify-content: center;
+  gap: 45px;
 }
 
-.category {
-  font-size:  12px;
-  line-height:  24px;
-  color:  #A5A3B9;
-  margin-top:  15px;
-  margin-bottom:  5px;
+.products__item {
+  width: 340px;
 }
 
-.product_name {
-  font-size:  20px;
-  line-height:  27px;
-  margin-top:  5px;
+.card {
+  background-color: #f7f7fa;
+  padding: 25px;
 }
 
-.compaund_list {
+.card__image {
+  display: block;
+  width: 290px;
+  margin-bottom: 30px;
+}
+
+.card__category {
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.card__name {
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+
+.card__description {
+  margin-bottom: 15px;
+}
+
+.card__compaund {
   margin-bottom: 25px;
 }
 
-.price_sum {
-  display: flex;
-  justify-content: space-between;
+.compaund__list {
+  margin-left: 15px;
+  padding-top: 5px;
 }
 
-.price {
-  font-size:  20px;
-  line-height:  24px;
-  font-weight:  700;
-  margin-top:  25px;
-}
+.compaund__name {
 
-.sum {
-  font-weight: 400;
-}
-
-.product_card_box {
-  box-sizing:  border-box;
-  max-width:  340px;
-  padding:  25px;
-  background-color:  #F7F7FA;
 }
 
 .ingredients {
-  margin:  5px;
+  margin-bottom: 5px;
+}
+
+.price-sum {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 24px;
 }
