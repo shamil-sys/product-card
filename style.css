@@ -16,6 +16,14 @@ body {
   color:  #515076;
 }
 
+.button__blue {
+  background-color: blue;
+}
+
+.button__aqua {
+  background-color: aqua;
+}
+
 .catalog__conteiner {
   background-image: url("image/bg_dandelions.png");
   background-repeat: no-repeat;
@@ -91,10 +99,6 @@ body {
 .compaund__list {
   margin-left: 15px;
   padding-top: 5px;
-}
-
-.compaund__name {
-
 }
 
 .ingredients {
