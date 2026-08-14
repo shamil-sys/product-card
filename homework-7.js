@@ -1,4 +1,4 @@
-function cityWeather(city, temperature) {
+function showCityWeather(city, temperature) {
     console.log(`Сейчас в ${city} температура — ${temperature} градусов по Цельсию.`);
 }
 cityWeather ("Торонто", 23)
