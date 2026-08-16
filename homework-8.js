@@ -13,7 +13,7 @@ const myDetails = {
   numberOfChildren: 5,
 }
 
-console.log (myDetails)
+console.log (myDetails);
 
 
 // 4. Создайте объект, который будет хранить данные об автомобиле
@@ -25,36 +25,38 @@ const car = {
   transmission: "manual",
 }
 
-console.log(car)
+car.owner = myDetails;
+
+console.log(car);
 
 
 // 5. Написать функцию которая аргументом будет принимать объект, описанный в пункте №4.
 
-function getMaxSpeed (car) {
+function addMaxSpeed (car) {
   if ("maxSpeed" in car) {
     return
   }
-  car.maxSpeed = 180
+  car.maxSpeed = 180;
 }
-getMaxSpeed (car);
+addMaxSpeed (car);
 
-console.log(car.maxSpeed)
+console.log(car.maxSpeed);
 
 
 // 6. Написать функцию, которая выводит значение из объекта
 
 function showObjectKey (car, key) {
-  console.log(car[key])
+  console.log(car[key]);
 }
 
-showObjectKey (car, "model")
+showObjectKey (car, "model");
 
 
 // 7. Создать массив, который содержит названия продуктов (просто строки)
 
 const products = ["Хлеб", "Картошка", "Яйца", "Молоко", "Масло"]
 
-console.log(products)
+console.log(products);
 
 
 // 8. 8-ой пунк ДЗ
@@ -64,25 +66,25 @@ const listOfFilm = [
     title: "Безумный Макс: Дорога ярости",
     year: 2015,
     director: "Джордж Миллер",
-    genre: "фантастика"
+    genre: "фантастика",
   },
   {
     title: "Прибытие",
     year: 2016,
     director: "Дени Вильнёв",
-    genre: "драма"
+    genre: "драма",
   },
   {
     title: "Дюна",
     year: 2021,
     director: "Дени Вильнёв",
-    genre: "драма, фантастика"
+    genre: "драма, фантастика",
   },
   {
     title: "Бедные-несчастные",
     year: 2023,
     director: "Йоргос Лантимос",
-    genre: "комедия"
+    genre: "комедия",
   },
 ]  
 
@@ -91,11 +93,11 @@ listOfFilm.push (
     title: "Дюна: Часть вторая",
     year: 2024,
     director: "Дени Вильнёв",
-    genre: "драма, фантастика"
+    genre: "драма, фантастика",
   }
 )
 
-console.log(listOfFilm)
+console.log(listOfFilm);
 
 
 // 9. 9-ый пункт ДЗ
@@ -105,36 +107,36 @@ const marvelFilm = [
     title: "Мстители: Эра Альтрона",
     year: 2015,
     director: "Джосс Уидон",
-    genre: "фантастика"
+    genre: "фантастика",
   },
   {
     title: "Тор: Рагнарёк",
     year: 2017,
     director: "Тайка Вайтити",
-    genre: "фентези"
+    genre: "фентези",
   },
   {
     title: "Доктор Стрэндж в мультивселенной безумия",
     year: 2022,
     director: "Сэм Рэйми",
-    genre: "боевик, ужасы"
+    genre: "боевик, ужасы",
   },
 ]  
 
 const allFilm = [...listOfFilm, ...marvelFilm]
 
-console.log(allFilm)
+console.log(allFilm);
 
 
 // 10. 10-й пункт ДЗ
 
-function addIsOldMovie (allFilm) {
+function addOldMovie (allFilm) {
  return allFilm.map((oldFilm) => {
     return {
       ...oldFilm,
-      IsOldMovie: oldFilm.year < 2020 ? true  : false,
+      OldMovie: oldFilm.year < 2020 ? true  : false,
     }
   })
 }
 
-console.log(addIsOldMovie(allFilm));
+console.log(addOldMovie(allFilm));
