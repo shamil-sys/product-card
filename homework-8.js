@@ -134,7 +134,7 @@ function addOldMovie (allFilm) {
  return allFilm.map((oldFilm) => {
     return {
       ...oldFilm,
-      OldMovie: oldFilm.year < 2020 ? true  : false,
+      oldMovie: oldFilm.year < 2020 ? true  : false,
     }
   })
 }
