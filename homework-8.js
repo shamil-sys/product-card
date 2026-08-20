@@ -130,7 +130,7 @@ console.log(allFilm);
 
 // 10. 10-й пункт ДЗ
 
-function addOldMovie (allFilm) {
+function addPropertyFilm (allFilm) {
  return allFilm.map((oldFilm) => {
     return {
       ...oldFilm,
@@ -139,4 +139,4 @@ function addOldMovie (allFilm) {
   })
 }
 
-console.log(addOldMovie(allFilm));
+console.log(addPropertyFilm(allFilm));
