@@ -1,3 +1,6 @@
+
+import { socialComments } from './comments.js';
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const newNumbers = numbers.filter(number => number > 4)
 console.log('Задание №2 (фильтрация массива);', newNumbers)
@@ -18,8 +21,6 @@ console.log ('Задание №4 (переворачивание массива
 console.log ('Задание №4 (переворачивание массива);', reversedFurniture)
 
 
-
-import { socialComments } from './comments.js';
 const comEmailsComments = socialComments.filter (comment => comment.email.includes('.com'));
 console.log('Задание 7 (почта с .com):', comEmailsComments);
 
@@ -48,10 +49,8 @@ const validatedComments = socialComments.map(comment => ({
 console.log('Задание 10 (проверка на валидность body):', validatedComments);
 
 
-const emailsWithReduce = socialComments.reduce((emailsArray, comment) => {
-  emailsArray.push(comment.email); 
-  return emailsArray; 
-}, []);
+const emailsWithReduce = socialComments.reduce((emailsArray, comment) => 
+  emailsArray.concat(comment.email), []);
 console.log('Почты через reduce:', emailsWithReduce);
 
 
