@@ -1,7 +1,7 @@
 import { products } from './productCards.js';
 
 
-function renderProductCards() {
+function renderProductCards(products) {
     const container = document.getElementById("cards");
     const template = document.getElementById("card-template");
     const input = prompt("Сколько карточек отобразить? от 1 до 5");
@@ -41,5 +41,5 @@ function renderProductCards() {
   });
 }
 
-  renderProductCards();
+  renderProductCards(products);
 
