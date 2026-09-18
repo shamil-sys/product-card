@@ -22,7 +22,7 @@ function renderProductCards(products) {
   selected.forEach(product => {
     const cardClone = template.content.cloneNode(true);
 
-    cardClone.querySelector(".card__image").src = product.image;
+    cardClone.querySelector(".card__image").src = `image/${product.image}.png`;
     cardClone.querySelector(".card__image").alt = product.title;
     cardClone.querySelector(".card__category").textContent = product.category;
     cardClone.querySelector(".card__name").textContent = product.title;
@@ -35,11 +35,10 @@ function renderProductCards(products) {
       compositionList.appendChild(li);
     });
 
-    cardClone.querySelector(".sum").textContent = product.price;
+    cardClone.querySelector(".sum").textContent = `${product.price.toLocaleString("ru-RU")} \u20bd`;
 
     container.appendChild(cardClone);
   });
 }
 
   renderProductCards(products);
-
