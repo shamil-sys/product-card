@@ -24,7 +24,7 @@ body {
   background-color: aqua;
 }
 
-.catalog__conteiner {
+.catalog {
   background-image: url("image/bg_dandelions.png");
   background-repeat: no-repeat;
   background-size: 790px auto;
@@ -66,6 +66,7 @@ body {
 }
 
 .card {
+  width: 340px;
   background-color: #f7f7fa;
   padding: 25px;
 }
