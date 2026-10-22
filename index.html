@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="registration.css"> 
+
   <link rel="stylesheet" href="style.css">
+  
+
 </head>
 <body>
   <button id="change-first-card-color-button">Сменить цвет первой карточки</button>
@@ -12,6 +17,7 @@
   <button id="openGoogleButton">Открыть страницу Google.com</button>
   <button id="openConsoleLogButton">Вывод консоль лога и алерт</button>
   <button id="buttonColorChange" class="button__blue">Переключение цвета кнопки</button>
+  <button class="open_registration">Регистрация</button>
    <main class="catalog">
     <h1 class="title catalog__title">Выбери свой продукт</h1>
   
@@ -39,6 +45,51 @@
     </li>
   </template>
 
-  <script type="module" src="homework-10.js"></script>
+  <footer>
+  <section class="footer__section">
+  <div class="footer_info">
+    <p class="footer__name"> Product Cards </p>
+    <p class="footer__description"> У нас самые лучшие продукты для кожи ! </p>
+    <div class="socials">
+      <a href="#"> <img class="socials__icon" src="image/telegram.svg"> </a>
+      <a href="#"> <img class="socials__icon" src="image/vk.svg"> </a>
+  </div>
+  </div>
+  <div class="footer__subscribe">
+  <p class="footer__subscribe-text"> Подпишитесь на наши акции: </p>
+  <form class="footer__subscribe-form">
+    <label for="email">Ваш email:</label>
+    <input id="email" type="email" placeholder="Введите ваш email" required>
+    <button type="submit" class="footer__subscribe-button">Подписаться</button>
+    <p class="footer__error-massage"></p>
+  </form>
+  </div>
+  <nav class="footer_nav">
+    <p class="footer__links-title"> Быстрые ссылки </p>
+    <a class="footer__link" href="#">Главная</a>
+    <a class="footer__link" href="#">Магазин</a>
+    <a class="footer__link" href="#">Контакты</a>
+  </nav>
+  </section>
+  <p class="footer__copyright"> 2024 product cards.com © All rights reserved.</p>
+  </footer> 
+
+  
+  <div class="overlay"></div>
+  <div id="registration-modal" class="modal">
+  <button class="modal_close">×</button>
+  <h2 class="registration_title"> Регистрация аккаунта </h2>
+  <form id="registration-form"class="registration_form">
+    <label> Имя <input type="text" name="firstName" placeholder="Введите имя" required> </label>
+    <label> Фамилия <input type="text" name="lastName" placeholder="Введите фамилию" required> </label>
+    <label> Дата рождения <input type="date" name="birthDate" required> </label>
+    <label> Логин <input type="text" name="login" placeholder="Введите логин" required> </label>
+    <label> Пароль <input type="password" name="password" placeholder="Введите пароль" required> </label>
+    <label> Повторите пароль <input type="password" name="repeatPassword" placeholder="Повторите пароль" required > </label>
+    <button type="submit" class="submit-btn"> Зарегистрироваться </button>
+  </form>
+  </div>
+
+  <script type="module" src="homework-11.js"></script>
 </body>
 </html>
