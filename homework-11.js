@@ -31,16 +31,9 @@ emailForm.addEventListener("submit", (event) => {
     }
   }
 
-  if (openBtn) {
-    openBtn.addEventListener('click', openModal);
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-  if (overlay) {
-    overlay.addEventListener('click', closeModal);
-  }
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
 
   // Проверка совпадения паролей в реальном времени
   function validatePasswords() {

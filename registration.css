@@ -17,15 +17,13 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* полупрозрачный чёрный */
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
 /* Класс, который мы добавим через JS, чтобы показать overlay */
 .overlay.active {
-  opacity: 1;
-  visibility: visible;
+  display: flex;
 }
 
 /* Модальное окно */
@@ -41,17 +39,15 @@
   width: 400px;
   max-width: 90vw;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  /* Скрыто по умолчанию */
-  opacity: 0;
+  display: none;
   pointer-events: none; /* нельзя кликать, пока не покажем */
-  transition: opacity 0.3s;
+  transition: display 0.3s;
 }
 
 .modal.active {
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   pointer-events: all;
 }
 
